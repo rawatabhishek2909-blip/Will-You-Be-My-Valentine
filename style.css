@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    position: relative;
+    height: 120px;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    margin-right: 20px;
+}
+
+#yesBtn:hover {
+    background-color: #e63950;
+}
+
+#noBtn {
+    background-color: #adb5bd;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #ff4d6d;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-110vh) scale(1.6);
+        opacity: 0;
+    }
+}
